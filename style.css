@@ -199,7 +199,7 @@ input[type="submit"] {
     display: none; /* Hide the hamburger button by default */
   }
 
-@media (max-width: 1313px) {
+@media (max-width: 960px) {
     
     .toggle-btn {
         display: block; /* Show the hamburger button on small screens */
