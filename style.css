@@ -18,7 +18,7 @@ nav {
 
 /* Remove bullet points from the navigation */
 ul {
-  list-style: none;
+  list-style: circle;
 }
 
 /* Display navigation links horizontally */
@@ -47,6 +47,7 @@ header {
 nav {
   background-color: #333;
   padding: 10px;
+  height: 30px;
 }
 
 /* Flexbox container to make the body a flex container */
@@ -139,6 +140,9 @@ a:hover {
   border: 1px solid #ccc;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+
+  
 .form-container {
   display: flex;
   justify-content: center;
@@ -198,13 +202,10 @@ input[type="submit"] {
   .close-btn {
     display: none; /* Hide the hamburger button by default */
   }
-
+#home-photo {
+    max-height: 200px;
+}
 @media (max-width: 960px) {
-    
-    .toggle-btn {
-        display: block; /* Show the hamburger button on small screens */
-        /* Add other styling for the button if needed */
-      }
 
     section {
       flex-direction: column; /* Stacking elements vertically */
@@ -218,8 +219,7 @@ input[type="submit"] {
         cursor: pointer;
         padding: 10px;
         background-color: #333;
-        color: #fff;
-        
+        color: #fff;        
       }
     
       /* Hide the navigation links by default */
@@ -231,18 +231,48 @@ input[type="submit"] {
       nav ul.active {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust this value based on your header height */
-        left: 0;
         background-color: #333;
-        width: 400px;
         opacity: 0.95;
+        align-items: center;
+        float: right;
+      }
+      
+      nav ul.active .toggle-btn {
+        float: right; /* Float the toggle button to the left */
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
       }
     
       /* Style the navigation links within the dropdown */
       nav ul.active li {
         padding: 15px;
         border-bottom: 1px solid #555;
+      }
+
+      #home-photo {
+        max-width: 200px;
+      }
+      .top-coffee {
+        position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      margin: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    
+    .coffee-shops {
+        position: absolute;
+        left: 300px;
+        background-color: rgba(255, 255, 255, 0.8); 
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 14px;
       }
   }
 
