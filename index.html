@@ -10,6 +10,7 @@
     <header>
       <h1>Welcome to Washington State</h1>
       <nav>
+        <div class="toggle-btn">&#9776;</div>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="capital.html">Capital</a></li>
@@ -31,80 +32,115 @@
       </div>
       <section>
         <div class="top-coffee">
+          <img src="./photos/olympia.jpeg" alt="Olympia Image" />
+          <a
+            href="https://stateofwatourism.com/olympia-city-guide/"
+            target="_blank"
+            ><i>image source</i></a
+          >
           <h3>Olympia</h3>
           <ul>
-            <li>Here youre can learn about Olympia</li>
-            <li>City population</li>
-            <li>Establishment of Olympia</li>
-            <li>Top Coffee Shops:</li>
-            <li>
+            <li>- Learn about Olympia</li>
+            <li>- City population</li>
+            <li>- Establishment of Olympia</li>
+            <aside>
+              <li>Top Coffee Shops:</li>
+              <li>
                 <b>
-              <a href="https://www.olympiacoffee.com/" target="_blank"
-                >Olympia Coffee</a
-              ></b>
-            </li>
-            <li>
+                  <a href="https://www.olympiacoffee.com/" target="_blank"
+                    >Olympia Coffee</a
+                  ></b
+                >
+              </li>
+              <li>
                 <b>
-              <a href="https://www.burialgroundscoffee.com/" target="_blank"
-                >Burial Grounds</a
-              ></b>
-            </li>
-            <li>
+                  <a href="https://www.burialgroundscoffee.com/" target="_blank"
+                    >Burial Grounds</a
+                  ></b
+                >
+              </li>
+              <li>
                 <b>
-              <a href="https://www.dancinggoats.com/" target="_blank"
-                >Dancing Goats</a
-              ></b>
-            </li>
+                  <a href="https://www.dancinggoats.com/" target="_blank"
+                    >Dancing Goats</a
+                  ></b
+                >
+              </li>
+            </aside>
           </ul>
         </div>
 
         <div class="top-coffee">
+          <img src="./photos/seattle.jpeg" alt="Seattle Image" />
+          <a href="https://sph.washington.edu/life-seattle"
+            ><i>image source</i></a
+          >
           <h3>Seattle</h3>
           <ul>
-            <li>Here youre can learn about Seattle</li>
-            <li>City population</li>
-            <li>Establishment of Seattle</li>
-            <li>Top Coffee Shops:</li>
-            <li>
+            <li>- Learn about Seattle</li>
+            <li>- City population</li>
+            <li>- Establishment of Seattle</li>
+            <aside>
+              <li>Top Coffee Shops:</li>
+              <li>
                 <b>
-              <a href="https://www.root-plants.com/" target="_blank">Root</a></b>
-            </li>
-            <li>
+                  <a href="https://www.root-plants.com/" target="_blank"
+                    >Root</a
+                  ></b
+                >
+              </li>
+              <li>
                 <b>
-              <a href="https://www.caffevita.com/" target="_blank"
-                >Caffe Vita</a
-              ></b>
-            </li>
-            <li><b>
-              <a href="https://www.aroomcoffee.com/" target="_blank">Aroom</a></b>
-            </li>
+                  <a href="https://www.caffevita.com/" target="_blank"
+                    >Caffe Vita</a
+                  ></b
+                >
+              </li>
+              <li>
+                <b>
+                  <a href="https://www.aroomcoffee.com/" target="_blank"
+                    >Aroom</a
+                  ></b
+                >
+              </li>
+            </aside>
           </ul>
         </div>
         <div class="top-coffee">
+          <img src="./photos/tacoma.jpeg" alt="Tacoma Image" />
+          <a
+            href="https://www.pdxmonthly.com/travel-and-outdoors/what-to-do-tacoma-washington-weekend"
+            ><i>image source</i></a
+          >
           <h3>Tacoma</h3>
           <ul>
-            <li>Here youre can learn about Tacoma</li>
-            <li>City population</li>
-            <li>Establishment of Tacoma</li>
-            <li>Top Coffee Shops:</li>
-            <li>
+            <li>- Learn about Tacoma</li>
+            <li>- City population</li>
+            <li>- Establishment of Tacoma</li>
+            <aside>
+              <li>Top Coffee Shops:</li>
+              <li>
                 <b>
-              <a href="https://bluebeardcoffee.com/" target="_blank"
-                >Bluebeard Coffee</a
-              ></b>
-            </li>
-            <li>
+                  <a href="https://bluebeardcoffee.com/" target="_blank"
+                    >Bluebeard Coffee</a
+                  ></b
+                >
+              </li>
+              <li>
                 <b>
-              <a href="https://www.landercoffee.com/" target="_blank"
-                >Lander Coffee</a
-              ></b>
-            </li>
-            <li>
+                  <a href="https://www.landercoffee.com/" target="_blank"
+                    >Lander Coffee</a
+                  ></b
+                >
+              </li>
+              <li>
                 <b>
-              <a href="https://www.myanthemcoffee.com/" target="_blank"
-                >Anthem Coffee</a
-              ></b>
-            </li>
+                  <a href="https://www.myanthemcoffee.com/" target="_blank"
+                    >Anthem Coffee</a
+                  ></b
+                >
+              </li>
+            </aside>
           </ul>
         </div>
       </section>
@@ -112,5 +148,22 @@
     <footer>
       <p>&copy; 2023 Noah Farinas. All rights reserved.</p>
     </footer>
+    <script>
+    const toggleBtn = document.querySelector('.toggle-btn');
+const closeButton = document.querySelector('.close-btn');
+const navLinks = document.querySelector('nav ul');
+
+// Add a click event listener to the toggle button
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  closeButton.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+});
+
+// Add a click event listener to the close button
+closeButton.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  closeButton.style.display = 'none';
+});
+    </script>
   </body>
 </html>

@@ -129,10 +129,10 @@ a:hover {
 }
 
 .top-coffee {
-  flex-basis: calc(
-    33.33% - 20px
-  ); /* Each div occupies 1/3 of the available width minus some spacing */
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
   margin: 10px;
   background-color: #fff;
   padding: 10px;
@@ -143,7 +143,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the container takes up the full height of the section */
+  height: 100%;
 }
 
 form {
@@ -192,15 +192,57 @@ input[type="submit"] {
   align-items: center;
 }
 
-/* Responsive layout adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-  /* On smaller screens, each div occupies 50% of the available width */
-  .top-coffee {
-    flex-basis: calc(50% - 20px);
+.toggle-btn {
+    display: none; /* Hide the hamburger button by default */
+  }
+  .close-btn {
+    display: none; /* Hide the hamburger button by default */
   }
 
-  /* Adjust the max-width for the 'about' section on smaller screens */
-  .about {
-    max-width: 100%;
+@media (max-width: 1313px) {
+    
+    .toggle-btn {
+        display: block; /* Show the hamburger button on small screens */
+        /* Add other styling for the button if needed */
+      }
+
+    section {
+      flex-direction: column; /* Stacking elements vertically */
+      align-items: flex-start; /* Aligning content to the left */
+      text-align: left; /* Aligning text to the left */
+      margin-bottom: 20px; /* Add margin to separate stacked items */
+    }
+
+    .toggle-btn {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        
+      }
+    
+      /* Hide the navigation links by default */
+      nav ul {
+        display: none;
+      }
+    
+      /* Show the navigation links when the active class is added */
+      nav ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this value based on your header height */
+        left: 0;
+        background-color: #333;
+        width: 400px;
+        opacity: 0.95;
+      }
+    
+      /* Style the navigation links within the dropdown */
+      nav ul.active li {
+        padding: 15px;
+        border-bottom: 1px solid #555;
+      }
   }
-}
+

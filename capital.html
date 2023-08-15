@@ -10,6 +10,7 @@
     <header>
       <h1>Olympia - Capital of Washington</h1>
       <nav>
+        <div class="toggle-btn">&#9776;</div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="capital.html">Capital</a></li>
@@ -53,5 +54,22 @@
     <footer>
       <p>&copy; 2023 Your Name. All rights reserved.</p>
     </footer>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+    const closeButton = document.querySelector('.close-btn');
+    const navLinks = document.querySelector('nav ul');
+    
+    // Add a click event listener to the toggle button
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      closeButton.style.display = navLinks.classList.contains('active') ? 'block' : 'none';
+    });
+    
+    // Add a click event listener to the close button
+    closeButton.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      closeButton.style.display = 'none';
+    });
+        </script>
   </body>
 </html>
