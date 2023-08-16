@@ -205,6 +205,26 @@ input[type="submit"] {
 #home-photo {
     max-height: 200px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+  tr {
+    background-color: #f0f0f0;
+  }
 @media (max-width: 960px) {
 
     section {
